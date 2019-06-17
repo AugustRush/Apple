@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: ContentView())
+//         let host = ContentView().environmentObject(ChannelsViewModel())
+        window.rootViewController = UIHostingController(rootView: PicsumView())
         self.window = window
         window.makeKeyAndVisible()
     }

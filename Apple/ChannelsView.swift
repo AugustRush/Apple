@@ -17,17 +17,17 @@ struct Channel: Identifiable {
 
 struct ChannelsView : View {
     
-    var channels =  [Channel(id: "0", name: "纽约时报", icon: "channel_paper"),Channel(id: "1", name: "小说", icon: "channel_novel"),Channel(id: "2", name: "福利社", icon: "channel_happy")]
+    @EnvironmentObject var viewModel: ChannelsViewModel
     
     var body: some View {
         HStack {
-            List(channels.identified(by: \.id)) { channel in
+            List(self.viewModel.channels.identified(by: \.id)) { channel in
                 HStack {
                     Image(channel.icon).resizable(capInsets: EdgeInsets(), resizingMode: .stretch).renderingMode(.template).frame(width: 40, height: 40, alignment: .leading).foregroundColor(.gray)
                     Text(channel.name).font(.callout)
                     }
                     .tapAction {
-                        
+                        self.viewModel.updateCurrent(channel: channel)
                     }
             }.shadow(color: .gray, radius: 2, x: 2, y: 2)
             

@@ -15,11 +15,12 @@ struct WhitespaceView : View {
     }
 }
 
+internal let screenWidth = UIScreen.main.bounds.size.width
+
 struct ContentView : View {
-    let screenWidth = UIScreen.main.bounds.size.width
-    @State var showChannels = false
     @State var channelOffset: CGFloat =  -UIScreen.main.bounds.size.width / 2
     @State var userDraged = false
+    @EnvironmentObject var viewModel : ChannelsViewModel
     
     var body: some View {
         
@@ -29,20 +30,20 @@ struct ContentView : View {
                     self.userDraged = true
                 }
                 
-                if(self.showChannels) {
+                if(self.viewModel.showChannels) {
                     self.channelOffset = min(0, value.location.x - value.startLocation.x)
                 } else {
-                    self.channelOffset = min(0, value.location.x - value.startLocation.x - self.screenWidth / 2)
+                    self.channelOffset = min(0, value.location.x - value.startLocation.x - screenWidth / 2)
                 }
             }
             .onEnded { (value) in
                 self.userDraged = false
                 if(value.startLocation.x <= value.location.x) {
-                        self.showChannels = true
+                        self.viewModel.showChannels = true
                         self.channelOffset = 0
                 } else {
-                    self.showChannels = false
-                    self.channelOffset = -self.screenWidth / 2
+                    self.viewModel.showChannels = false
+                    self.channelOffset = -screenWidth / 2
                 }
             }
         
@@ -52,10 +53,9 @@ struct ContentView : View {
             NavigationView {
                 List {
                     Text("Just test")
-                }.navigationBarTitle(Text("Home"))
+                }.navigationBarTitle(Text(self.viewModel.current.name))
             }
-            
-            channelView.offset(x: userDraged ?  (self.channelOffset) : (showChannels ? 0 : -screenWidth/2), y: 0).animation(showChannels ? .spring(initialVelocity: 0.6) : nil)
+            channelView.offset(x: userDraged ?  (self.channelOffset) : (self.viewModel.showChannels ? 0 : -screenWidth/2), y: 0).animation(.spring(initialVelocity: 0.6))
         }.gesture(dragGesture)
     }
 }

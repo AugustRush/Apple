@@ -16,6 +16,9 @@
 		800EE21F22A91B26002848C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800EE21D22A91B26002848C4 /* LaunchScreen.storyboard */; };
 		800EE22722A91F79002848C4 /* API.strings in Resources */ = {isa = PBXBuildFile; fileRef = 800EE22622A91F79002848C4 /* API.strings */; };
 		805B207B22ADFE120017345C /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B207A22ADFE120017345C /* ChannelsView.swift */; };
+		80969BF022B25C1C005E5282 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */; };
+		80B7135822B78DA90049D7F1 /* PhotosChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */; };
+		80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135922B79AF00049D7F1 /* NetworkImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		800EE22022A91B26002848C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800EE22622A91F79002848C4 /* API.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = API.strings; sourceTree = "<group>"; };
 		805B207A22ADFE120017345C /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
+		80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
+		80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosChannelView.swift; sourceTree = "<group>"; };
+		80B7135922B79AF00049D7F1 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		BCBBF5A0189B157FAE639639 /* Pods-Apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple/Pods-Apple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +85,9 @@
 				800EE21422A91B23002848C4 /* SceneDelegate.swift */,
 				800EE21622A91B23002848C4 /* ContentView.swift */,
 				805B207A22ADFE120017345C /* ChannelsView.swift */,
+				80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */,
+				80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */,
+				80B7135922B79AF00049D7F1 /* NetworkImage.swift */,
 				800EE22622A91F79002848C4 /* API.strings */,
 				800EE21822A91B26002848C4 /* Assets.xcassets */,
 				800EE21D22A91B26002848C4 /* LaunchScreen.storyboard */,
@@ -229,9 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				805B207B22ADFE120017345C /* ChannelsView.swift in Sources */,
+				80B7135822B78DA90049D7F1 /* PhotosChannelView.swift in Sources */,
 				800EE21322A91B23002848C4 /* AppDelegate.swift in Sources */,
+				80969BF022B25C1C005E5282 /* ChannelsViewModel.swift in Sources */,
 				800EE21522A91B23002848C4 /* SceneDelegate.swift in Sources */,
 				800EE21722A91B23002848C4 /* ContentView.swift in Sources */,
+				80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
