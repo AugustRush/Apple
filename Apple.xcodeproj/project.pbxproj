@@ -10,15 +10,16 @@
 		46D31C8AE243D6B1F212086C /* Pods_Apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F5F6848DF46A425CA62E57 /* Pods_Apple.framework */; };
 		800EE21322A91B23002848C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21222A91B23002848C4 /* AppDelegate.swift */; };
 		800EE21522A91B23002848C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21422A91B23002848C4 /* SceneDelegate.swift */; };
-		800EE21722A91B23002848C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21622A91B23002848C4 /* ContentView.swift */; };
+		800EE21722A91B23002848C4 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21622A91B23002848C4 /* ChannelsView.swift */; };
 		800EE21922A91B26002848C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800EE21822A91B26002848C4 /* Assets.xcassets */; };
 		800EE21C22A91B26002848C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800EE21B22A91B26002848C4 /* Preview Assets.xcassets */; };
 		800EE21F22A91B26002848C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800EE21D22A91B26002848C4 /* LaunchScreen.storyboard */; };
 		800EE22722A91F79002848C4 /* API.strings in Resources */ = {isa = PBXBuildFile; fileRef = 800EE22622A91F79002848C4 /* API.strings */; };
-		805B207B22ADFE120017345C /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B207A22ADFE120017345C /* ChannelsView.swift */; };
-		80969BF022B25C1C005E5282 /* ChannelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */; };
-		80B7135822B78DA90049D7F1 /* PhotosChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */; };
+		805B207B22ADFE120017345C /* ChannelNavWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B207A22ADFE120017345C /* ChannelNavWrapper.swift */; };
+		80B7135822B78DA90049D7F1 /* PicsumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135722B78DA90049D7F1 /* PicsumView.swift */; };
 		80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135922B79AF00049D7F1 /* NetworkImage.swift */; };
+		815EED2B22BA341A00BC7DC5 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EED2A22BA341A00BC7DC5 /* Channel.swift */; };
+		816F974322BA4B3E00446E96 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F974222BA4B3E00446E96 /* HTTP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,16 +28,17 @@
 		800EE20F22A91B23002848C4 /* Apple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Apple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800EE21222A91B23002848C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800EE21422A91B23002848C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		800EE21622A91B23002848C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		800EE21622A91B23002848C4 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
 		800EE21822A91B26002848C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800EE21B22A91B26002848C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		800EE21E22A91B26002848C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800EE22022A91B26002848C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800EE22622A91F79002848C4 /* API.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = API.strings; sourceTree = "<group>"; };
-		805B207A22ADFE120017345C /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
-		80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewModel.swift; sourceTree = "<group>"; };
-		80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosChannelView.swift; sourceTree = "<group>"; };
+		805B207A22ADFE120017345C /* ChannelNavWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelNavWrapper.swift; sourceTree = "<group>"; };
+		80B7135722B78DA90049D7F1 /* PicsumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumView.swift; sourceTree = "<group>"; };
 		80B7135922B79AF00049D7F1 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
+		815EED2A22BA341A00BC7DC5 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		816F974222BA4B3E00446E96 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		BCBBF5A0189B157FAE639639 /* Pods-Apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple/Pods-Apple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,11 +85,8 @@
 			children = (
 				800EE21222A91B23002848C4 /* AppDelegate.swift */,
 				800EE21422A91B23002848C4 /* SceneDelegate.swift */,
-				800EE21622A91B23002848C4 /* ContentView.swift */,
-				805B207A22ADFE120017345C /* ChannelsView.swift */,
-				80969BEF22B25C1C005E5282 /* ChannelsViewModel.swift */,
-				80B7135722B78DA90049D7F1 /* PhotosChannelView.swift */,
-				80B7135922B79AF00049D7F1 /* NetworkImage.swift */,
+				815EED2C22BA343900BC7DC5 /* views */,
+				815EED2922BA340400BC7DC5 /* models */,
 				800EE22622A91F79002848C4 /* API.strings */,
 				800EE21822A91B26002848C4 /* Assets.xcassets */,
 				800EE21D22A91B26002848C4 /* LaunchScreen.storyboard */,
@@ -103,6 +102,26 @@
 				800EE21B22A91B26002848C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		815EED2922BA340400BC7DC5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				815EED2A22BA341A00BC7DC5 /* Channel.swift */,
+				816F974222BA4B3E00446E96 /* HTTP.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		815EED2C22BA343900BC7DC5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				800EE21622A91B23002848C4 /* ChannelsView.swift */,
+				805B207A22ADFE120017345C /* ChannelNavWrapper.swift */,
+				80B7135722B78DA90049D7F1 /* PicsumView.swift */,
+				80B7135922B79AF00049D7F1 /* NetworkImage.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		C306E67D47A260B29FE854A3 /* Pods */ = {
@@ -125,7 +144,6 @@
 				800EE20B22A91B23002848C4 /* Sources */,
 				800EE20C22A91B23002848C4 /* Frameworks */,
 				800EE20D22A91B23002848C4 /* Resources */,
-				6593E63AA20866DA0EDA47EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,30 +202,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6593E63AA20866DA0EDA47EB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Apple/Pods-Apple-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ENSwiftSideMenu/ENSwiftSideMenu.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ENSwiftSideMenu.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Apple/Pods-Apple-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EB3A4237A22D9A4CFE769F99 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,12 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805B207B22ADFE120017345C /* ChannelsView.swift in Sources */,
-				80B7135822B78DA90049D7F1 /* PhotosChannelView.swift in Sources */,
+				815EED2B22BA341A00BC7DC5 /* Channel.swift in Sources */,
+				805B207B22ADFE120017345C /* ChannelNavWrapper.swift in Sources */,
+				80B7135822B78DA90049D7F1 /* PicsumView.swift in Sources */,
 				800EE21322A91B23002848C4 /* AppDelegate.swift in Sources */,
-				80969BF022B25C1C005E5282 /* ChannelsViewModel.swift in Sources */,
 				800EE21522A91B23002848C4 /* SceneDelegate.swift in Sources */,
-				800EE21722A91B23002848C4 /* ContentView.swift in Sources */,
+				816F974322BA4B3E00446E96 /* HTTP.swift in Sources */,
+				800EE21722A91B23002848C4 /* ChannelsView.swift in Sources */,
 				80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
