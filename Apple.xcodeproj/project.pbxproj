@@ -20,6 +20,7 @@
 		80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135922B79AF00049D7F1 /* NetworkImage.swift */; };
 		815EED2B22BA341A00BC7DC5 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EED2A22BA341A00BC7DC5 /* Channel.swift */; };
 		816F974322BA4B3E00446E96 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816F974222BA4B3E00446E96 /* HTTP.swift */; };
+		81F4AAE922BB59FF0053D1BD /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F4AAE822BB59FF0053D1BD /* Global.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		80B7135922B79AF00049D7F1 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		815EED2A22BA341A00BC7DC5 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		816F974222BA4B3E00446E96 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		81F4AAE822BB59FF0053D1BD /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		BCBBF5A0189B157FAE639639 /* Pods-Apple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Apple/Pods-Apple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			children = (
 				800EE21222A91B23002848C4 /* AppDelegate.swift */,
 				800EE21422A91B23002848C4 /* SceneDelegate.swift */,
+				81F4AAE522BB59300053D1BD /* extensions */,
 				815EED2C22BA343900BC7DC5 /* views */,
 				815EED2922BA340400BC7DC5 /* models */,
 				800EE22622A91F79002848C4 /* API.strings */,
@@ -109,6 +112,7 @@
 			children = (
 				815EED2A22BA341A00BC7DC5 /* Channel.swift */,
 				816F974222BA4B3E00446E96 /* HTTP.swift */,
+				81F4AAE822BB59FF0053D1BD /* Global.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -122,6 +126,13 @@
 				80B7135922B79AF00049D7F1 /* NetworkImage.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		81F4AAE522BB59300053D1BD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		C306E67D47A260B29FE854A3 /* Pods */ = {
@@ -239,6 +250,7 @@
 				816F974322BA4B3E00446E96 /* HTTP.swift in Sources */,
 				800EE21722A91B23002848C4 /* ChannelsView.swift in Sources */,
 				80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */,
+				81F4AAE922BB59FF0053D1BD /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

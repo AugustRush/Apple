@@ -22,13 +22,10 @@ class PicsumViewModel: BindableObject {
     let didChange = PassthroughSubject<PicsumViewModel,Never>()
     var photos = [Photo]()
     var pageIndex = 0
-    var limit = 50
-    
-    init() {
-        fetchMorePhotos()
-    }
+    var limit = 5
     
     func fetchMorePhotos() {
+        self.pageIndex += 1
         let qurl = URL(string: "https://picsum.photos/v2/list?page=\(pageIndex)&limit=\(limit)")
         guard let url = qurl else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -50,17 +47,34 @@ class PicsumViewModel: BindableObject {
 struct PicsumView : View {
     
     @ObjectBinding var viewModel = PicsumViewModel()
-    let width = screenWidth - 40
+    let width = Global.screenWidth - 40
     
     var body: some View {
-        List {
-            ForEach(self.viewModel.photos) { photo in
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Author: \(photo.author)").font(.headline)
-                    NetworkImage("https://picsum.photos/id/\(photo.id)/\(Int(self.width))/\(Int((photo.height / photo.width) * self.width))").frame(width: self.width, height: (photo.height / photo.width) * self.width, alignment: .leading).cornerRadius(4, antialiased: true)
+            List {
+                Section {
+                    ForEach(self.viewModel.photos) { photo in
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack(alignment: .bottom, spacing: 4) {
+                                Image("list_author").resizable(resizingMode:.stretch).frame(width: 20, height: 20, alignment: .leading)
+                                Text("\(photo.author)").font(.subheadline)
+                            }
+                            ZStack(alignment: .bottomTrailing) {
+                                NetworkImage("https://picsum.photos/id/\(photo.id)/\(Int(self.width))/\(Int((photo.height / photo.width) * self.width))").frame(width: self.width, height: (photo.height / photo.width) * self.width, alignment: .trailing).cornerRadius(4, antialiased: true)
+                                Text("\(photo.id)").font(.footnote).color(.white).blur(radius: 0.5)
+                            }
+                            }
+                            .shadow(color: .gray, radius: 2, x: 1, y: 1)
+                            .padding(.init(arrayLiteral: [.top,.bottom]), 10)
+                    }
+                }
+            
+                Section {
+                    Text("refreshing")
+                }
+                .onAppear {
+                    self.viewModel.fetchMorePhotos()
                 }
             }
-        }
         .navigationBarTitle(Text("Photos"))
     }
 }

@@ -56,6 +56,6 @@ struct NetworkImage : View {
     }
     
     var body: some View {
-        Image(uiImage: loader.image).resizable(resizingMode:.stretch).onAppear { self.loader.download()  } .onDisappear { self.loader.cancel() }
+        Image(uiImage: loader.image).resizable(resizingMode:.stretch).aspectRatio(contentMode: .fill).onAppear { self.loader.download()  } .onDisappear { self.loader.cancel() }
     }
 }
