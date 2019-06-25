@@ -19,3 +19,8 @@ struct Global {
     static let color5 = Color(red: 132, green: 166, blue: 243)
     static let color6 = Color(red: 219, green: 192, blue: 200)
 }
+
+struct Unsplash {
+    static let accessKey = "a2f8563a119a002ebf9c3f6db7abab76eea38c931efec0fd04a710823021614d"
+    static let secretKey = "f292f4d1079b5f11cefbe2739ab13662c46015c980b5b3f7c8468b470641af64"
+}

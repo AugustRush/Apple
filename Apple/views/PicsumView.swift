@@ -47,25 +47,17 @@ class PicsumViewModel: BindableObject {
 struct PicsumView : View {
     
     @ObjectBinding var viewModel = PicsumViewModel()
-    let width = Global.screenWidth - 40
+    let width = Global.screenWidth
     
     var body: some View {
             List {
                 Section {
                     ForEach(self.viewModel.photos) { photo in
-                        VStack(alignment: .leading, spacing: 8) {
-                            HStack(alignment: .bottom, spacing: 4) {
-                                Image("list_author").resizable(resizingMode:.stretch).frame(width: 20, height: 20, alignment: .leading)
-                                Text("\(photo.author)").font(.subheadline)
-                            }
-                            ZStack(alignment: .bottomTrailing) {
-                                NetworkImage("https://picsum.photos/id/\(photo.id)/\(Int(self.width))/\(Int((photo.height / photo.width) * self.width))").frame(width: self.width, height: (photo.height / photo.width) * self.width, alignment: .trailing).cornerRadius(4, antialiased: true)
-                                Text("\(photo.id)").font(.footnote).color(.white).blur(radius: 0.5)
-                            }
-                            }
-                            .shadow(color: .gray, radius: 2, x: 1, y: 1)
-                            .padding(.init(arrayLiteral: [.top,.bottom]), 10)
-                    }
+                            NetworkImage("https://picsum.photos/id/\(photo.id)/\(Int(self.width))/\(Int((photo.height / photo.width) * self.width))").frame(width: self.width, height: (photo.height / photo.width) * self.width, alignment: .trailing)
+                            .overlay(HStack {
+                                        Text("\(photo.author)").font(.caption).color(.white).padding(4)
+                                }, alignment: .bottomLeading).background(Color.gray)
+                    }.listRowInsets(EdgeInsets())
                 }
             
                 Section {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46D31C8AE243D6B1F212086C /* Pods_Apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F5F6848DF46A425CA62E57 /* Pods_Apple.framework */; };
 		800EE21322A91B23002848C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21222A91B23002848C4 /* AppDelegate.swift */; };
 		800EE21522A91B23002848C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21422A91B23002848C4 /* SceneDelegate.swift */; };
 		800EE21722A91B23002848C4 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EE21622A91B23002848C4 /* ChannelsView.swift */; };
@@ -16,6 +15,7 @@
 		800EE21F22A91B26002848C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800EE21D22A91B26002848C4 /* LaunchScreen.storyboard */; };
 		800EE22722A91F79002848C4 /* API.strings in Resources */ = {isa = PBXBuildFile; fileRef = 800EE22622A91F79002848C4 /* API.strings */; };
 		805B207B22ADFE120017345C /* ChannelNavWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B207A22ADFE120017345C /* ChannelNavWrapper.swift */; };
+		80B20BBC22C1FD2300D04F90 /* Pods_Apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77F5F6848DF46A425CA62E57 /* Pods_Apple.framework */; };
 		80B7135822B78DA90049D7F1 /* PicsumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135722B78DA90049D7F1 /* PicsumView.swift */; };
 		80B7135A22B79AF00049D7F1 /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B7135922B79AF00049D7F1 /* NetworkImage.swift */; };
 		815EED2B22BA341A00BC7DC5 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EED2A22BA341A00BC7DC5 /* Channel.swift */; };
@@ -36,6 +36,7 @@
 		800EE22022A91B26002848C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800EE22622A91F79002848C4 /* API.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = API.strings; sourceTree = "<group>"; };
 		805B207A22ADFE120017345C /* ChannelNavWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelNavWrapper.swift; sourceTree = "<group>"; };
+		80B20BBF22C1FDCE00D04F90 /* libswiftFoundation.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftFoundation.tbd; path = usr/lib/swift/libswiftFoundation.tbd; sourceTree = SDKROOT; };
 		80B7135722B78DA90049D7F1 /* PicsumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumView.swift; sourceTree = "<group>"; };
 		80B7135922B79AF00049D7F1 /* NetworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImage.swift; sourceTree = "<group>"; };
 		815EED2A22BA341A00BC7DC5 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
@@ -49,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46D31C8AE243D6B1F212086C /* Pods_Apple.framework in Frameworks */,
+				80B20BBC22C1FD2300D04F90 /* Pods_Apple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +60,7 @@
 		77CB7C90B4B738ED43D72DB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				80B20BBF22C1FDCE00D04F90 /* libswiftFoundation.tbd */,
 				77F5F6848DF46A425CA62E57 /* Pods_Apple.framework */,
 			);
 			name = Frameworks;
@@ -396,6 +398,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = august.com.Apple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -416,6 +422,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = august.com.Apple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
